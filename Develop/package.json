@@ -1,0 +1,18 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "This is homework 10 Team Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Thomas Bolling",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
+  }
+}
