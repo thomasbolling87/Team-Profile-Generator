@@ -22,3 +22,5 @@ class Engineer {
         return 'Engineer';
     }
 }
+
+module.exports = Engineer;

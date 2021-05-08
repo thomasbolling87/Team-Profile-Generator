@@ -19,6 +19,8 @@ class Manager {
         return this.officenumber;
     }
     getRole() {
-        return 'Engineer';
+        return 'Manager';
     }
 }
+
+module.exports = Manager;

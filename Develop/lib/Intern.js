@@ -19,6 +19,8 @@ class Intern {
         return this.school;
     }
     getRole() {
-        return 'intern';
+        return 'Intern';
     }
 }
+
+module.exports = Intern;
