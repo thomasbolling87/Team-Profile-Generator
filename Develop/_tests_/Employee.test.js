@@ -1,3 +1,4 @@
+// Test page for the Employee values
 const Employee = require ('../lib/Employee');
 
 test("This should return the employee's name, id, email, and role", () => {

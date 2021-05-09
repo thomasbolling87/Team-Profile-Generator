@@ -1,3 +1,4 @@
+// Test page for the Intern values
 const Intern = require ('../lib/Intern');
 
 test("This should return the intern's name, id, email, github, and role", () => {

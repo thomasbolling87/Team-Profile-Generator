@@ -7,6 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
+    "dev": "node index.js",
     "test": "jest"
   },
   "author": "Thomas Bolling",

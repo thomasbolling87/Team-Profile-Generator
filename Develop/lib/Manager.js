@@ -1,11 +1,14 @@
+// Manager class that contains basic manager data
 class Manager {
-    constructor (name, id, email, officenumber) {
+    constructor (name, id, email, officeNumber) {
         this.name = name;
         this.id = id;
         this.email = email;
-        this.officenumber = officenumber;
+        this.officeNumber = officeNumber;
+        this.role = "Manager";
     }
 
+    // These get functions will be called to place inputted data from user into the cards
     getName() {
         return this.name;
     }
@@ -16,10 +19,10 @@ class Manager {
         return this.email;
     }
     getOfficenumber() {
-        return this.officenumber;
+        return this.officeNumber;
     }
     getRole() {
-        return 'Manager';
+        return this.role;
     }
 }
 

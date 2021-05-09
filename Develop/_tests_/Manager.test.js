@@ -1,3 +1,4 @@
+// Test page for the Manager values
 const Manager = require ('../lib/Manager');
 
 test("This should return the manager's name, id, email, github, and role", () => {
