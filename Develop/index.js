@@ -2,11 +2,13 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const style = require('../assets/style')
 
+// Imported all of the classes to be called to create store information that will be placed in the generated HTML file.
 const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
+// Initializes the application along with the build HTML function
 function init() {
     buildHtml();
     team();
@@ -26,6 +28,7 @@ function team() {
             addManager();
         });
 }
+// Function to add a Manager
 function addManager() {
     inquirer.prompt ([
         {
@@ -62,6 +65,7 @@ function addTeamMember() {
             choices: ["Add an Employee", "Add an Engineer", "Add an Intern", "My team is complete!"]
         }
     ])
+        // Function containing if/else statements that allows the user to select the next type of team member or if the want to close the application to build HTML.
         .then(function (data) {
             let teamMember = "";
             if (data.selectMember == "Add an Employee") {
@@ -75,6 +79,7 @@ function addTeamMember() {
             }
         });
 }
+// Function to add a new employee
 function addEmployee() {
     inquirer.prompt([
         {
@@ -97,6 +102,7 @@ function addEmployee() {
             addTeamMember();
         });
 }
+// Function to add an Engineer
 function addEngineer() {
     inquirer.prompt([
         {
@@ -123,6 +129,7 @@ function addEngineer() {
             addTeamMember();
         });
 }
+// Function to add an Intern
 function addIntern() {
     inquirer.prompt([
         {
@@ -157,10 +164,12 @@ function addIntern() {
         });
 }
 
-       
+// Array that contains all of the answered question from the team function inquirer.      
 let finishedTeamAnswers = [];
 
+// Function that start building the HTML.
 function buildHtml() {
+    // Array that will contain all of the HTML which will be later used to generate the HTML file.
     const htmlArray = [];
     const startHtml= 
     `<!DOCTYPE html>
@@ -185,8 +194,10 @@ function buildHtml() {
     
     <div class="card-container">`
 
+    // Pushes the startHTML into htmlArray that will contain the generated HTML
     htmlArray.push(startHtml);
 
+    // For loop that goes through the answered questions to place the answers into the proper cards
     for (let i = 0; i < finishedTeamAnswers.length; i++) {
         let teamCards = `
         <div class="team-card">
@@ -224,6 +235,7 @@ function buildHtml() {
     `
     htmlArray.push(finishedHtml);
 
+    // Using the htmlArray and .join method fs.appendFile will turn the array into readable string to generate the HTML file
     fs.appendFile(`./Created-HTML/${finishedTeamAnswers[0]}.html`, htmlArray.join(""), function (err) {
         
     });
