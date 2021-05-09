@@ -12,6 +12,7 @@ Please click the link to view a demonstartion of the application in use: https:/
 
 ## Pictures
 
+![Team Profile Generator](https://user-images.githubusercontent.com/78775177/117565410-ab35ee80-b076-11eb-9ec8-ebb01f758fab.PNG)
 
 ## Table of Contents
 
